@@ -16,13 +16,13 @@ triggers a build.
 Expected Outcome: Jenkins should detect the new commit and start the CI pipeline
 automatically, fetching the latest code changes.
 
-3. Access Control and Permissions:
+2. Access Control and Permissions:
    
 Test Case 2: Restrict access to certain Jenkins jobs or features based on user roles.
 Expected Outcome: Users without appropriate permissions should be unable to trigger or
 modify Jenkins jobs beyond their assigned privileges.
 
-5. Notification Setup:
+3. Notification Setup:
    
 Test Case 3: Configure email notifications for build status changes (e.g., success, failure,
 unstable).
