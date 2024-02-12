@@ -26,6 +26,19 @@ pipeline {
     
   }
 
+  post{
+      always{
+            sh 'docker rm -f mypycont'
+            sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            mail  to: "chaitra.teggi91@gmail.com",
+                  subject: "Notification mail from Jenkins",
+                  body: "CI/CD pipeline completed successfully.\n\nCheck the application"
+                
+                
+        }
+}
+
 
 
 }
